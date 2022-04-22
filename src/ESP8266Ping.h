@@ -37,8 +37,8 @@ class PingClass {
   public:
     PingClass();
 
-    bool ping(IPAddress dest,   unsigned int count = 5);
-    bool ping(const char* host, unsigned int count = 5);
+    bool ping(IPAddress dest,   unsigned int count = 1);
+    bool ping(const char* host, unsigned int count = 1);
 
     int minTime();
     int averageTime();
@@ -54,8 +54,5 @@ class PingClass {
     static byte _expected_count, _errors, _success;
     static uint _min_time, _avg_time, _max_time;
 };
-
-#include "ESP8266Ping.impl.h"
-PingClass Ping;
 
 #endif
